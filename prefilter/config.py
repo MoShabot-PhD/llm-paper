@@ -7,8 +7,6 @@ RESULTS_DIR = ROOT / "results"
 KEYWORDS_CSV = ROOT / "keywords.csv"
 SCRAPED_CSV = DATA_DIR / "yt_scraped_exp.csv"
 TRIAGED_XLSX = DATA_DIR / "triaged_videos.xlsx"
-EXPANSION_CSV = DATA_DIR / "youtube_videos_expansion.csv"
-EXPANDED_XLSX = DATA_DIR / "triaged_videos_expanded.xlsx"
 TO_ANNOTATE_CSV = RESULTS_DIR / "to_annotate.csv"
 ANNOTATIONS_DIR = RESULTS_DIR / "annotations"
 
@@ -16,7 +14,6 @@ SEED = 42
 
 MAX_RESULTS_PER_QUERY = 10
 SCRAPE_DELAY_SECONDS = 7
-EXPANSION_QUERIES = 130
 
 API_MODELS = ["anthropic/claude-sonnet-4.6:batch", "openai/gpt-5.2:batch"]
 API_TEMPERATURE = 1

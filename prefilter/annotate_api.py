@@ -5,13 +5,13 @@ import pandas as pd
 from dotenv import load_dotenv
 
 from prefilter.config import (ANNOTATIONS_DIR, API_CHUNK_SIZE, API_MAX_TOKENS, API_MODELS, API_TEMPERATURE,
-                              EXPANDED_XLSX, TO_ANNOTATE_CSV)
+                              TO_ANNOTATE_CSV, TRIAGED_XLSX)
 from prefilter.manifest import write_manifest
 from prefilter.models.openrouter import OpenRouterModel
 
 
 def write_input_csv():
-    df = pd.read_excel(EXPANDED_XLSX)
+    df = pd.read_excel(TRIAGED_XLSX)
     TO_ANNOTATE_CSV.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(TO_ANNOTATE_CSV, index=False)
     print(f"{len(df)} rows -> {TO_ANNOTATE_CSV}")
